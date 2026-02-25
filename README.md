@@ -71,6 +71,11 @@ npx playwright test --headed
 
 ```bash
 npx playwright test --project=chromium
+
+- Executar em modo debug:
+
+```bash
+npx playwright test --debug
 ```
 
 - Gerar relatório HTML e abrir em seguida:
