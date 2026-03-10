@@ -55,6 +55,12 @@ Observações:
 npx playwright test
 ```
 
+- Executar todos os testes na interface visual:
+
+```bash
+npx playwright test --ui
+```
+
 - Executar um arquivo de teste específico:
 
 ```bash
