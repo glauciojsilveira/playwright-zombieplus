@@ -23,15 +23,12 @@ class LoginPage {
         
     }
 
-    async isLoggedIn() {
-        await this.page.waitForLoadState('networkidle');
-        await expect(this.page).toHaveURL('http://localhost:3000/admin/movies');
-    }
-
-    async alertEmailHaveText(text) {
-        const alert = this.page.locator('.email-alert');
+    async alertHaveText(text) {
+        const alert = this.page.locator('span[class$=alert]');
         await expect(alert).toHaveText(text);
     }
+
+
 
 }
 

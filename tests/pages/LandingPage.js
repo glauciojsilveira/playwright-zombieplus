@@ -25,7 +25,15 @@ class LandingPage {
     
     
     async alertHaveText(target) {
-            await expect(this.page.locator('.alert')).toHaveText(target);
+        const alerts = this.page.locator('span[class$="alert"]');
+        if (Array.isArray(target)) {
+            await expect(alerts).toHaveCount(target.length);
+            for (let i = 0; i < target.length; i += 1) {
+                await expect(alerts.nth(i)).toHaveText(target[i]);
+            }
+        } else {
+            await expect(alerts).toHaveText(target);
+        }
     }
 
 }

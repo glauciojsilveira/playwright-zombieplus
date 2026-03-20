@@ -9,6 +9,7 @@ Principais áreas de teste (resumo):
 - Gestão de Leads: busca e exclusão de leads.
 
 Veja os casos completos em: [CasosDeTestes.md](CasosDeTestes.md)
+Veja os cenários BDD em: [CenariosBDD.md](CenariosBDD.md)
 
 **Pré-requisitos**
 
@@ -42,6 +43,32 @@ npm install --save-dev @playwright/test
 ```bash
 npx playwright install
 ```
+
+## Dependência adicional: Faker (compatível com CommonJS)
+
+Neste projeto usamos a versão **`@faker-js/faker@^9.6.0`** porque ela é distribuída em **CommonJS**, o que evita o erro:
+
+> `require() of ES Module ... not supported`
+
+As versões 10+ do Faker são ES Modules e exigem que o projeto esteja em modo ESM (`"type": "module"` no `package.json`) ou que se use `import()` dinâmico.
+
+Instalação:
+
+```bash
+npm install @faker-js/faker@^9.6.0
+```
+
+Uso em testes (CommonJS):
+
+```js
+const { faker } = require('@faker-js/faker')
+const randomName = faker.person.fullName()
+const randomEmail = faker.internet.email()
+```
+
+Observações:
+- Se você migrar o projeto para ESM (`"type": "module"`), poderá atualizar para `@faker-js/faker` 10+ e usar `import { faker } from '@faker-js/faker'`.
+- A versão `9.6.0` garante compatibilidade com a estrutura atual de testes do Playwright (CommonJS).
 
 Observações:
 - Em Linux pode ser necessário `npx playwright install-deps` antes de instalar navegadores.

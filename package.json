@@ -1,7 +1,19 @@
 {
+  "name": "playwright-zombie",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test"
+  },
+  "author": "Glaucio José Silveira",
+  "license": "ISC",
   "devDependencies": {
+    "@faker-js/faker": "^9.9.0",
     "@playwright/test": "^1.58.1",
     "@types/node": "^25.2.0"
   },
-  "scripts": {}
+  "dependencies": {
+    "@playwright/mcp": "^0.0.68"
+  }
 }
