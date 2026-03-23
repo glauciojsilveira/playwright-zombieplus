@@ -49,6 +49,127 @@ Observações:
 
 **Comandos úteis para executar os testes**
 
+**MCP do Playwright neste projeto**
+
+O workspace deste repositório já está configurado com o servidor MCP do Playwright em `.vscode/mcp.json`:
+
+```json
+{
+  "servers": {
+    "playwright": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@playwright/mcp@latest"
+      ],
+      "type": "stdio"
+    }
+  },
+  "inputs": []
+}
+```
+
+O projeto também expõe um script opcional no `package.json`:
+
+```bash
+npm run mcp:playwright
+```
+
+Se for a primeira vez usando o ambiente, garanta também que os navegadores do Playwright estejam instalados:
+
+```bash
+npx playwright install
+```
+
+**Como instalar e configurar no Roo, no Copilot e no Codex**
+
+Todos os exemplos abaixo usam o mesmo servidor MCP do Playwright:
+
+```json
+{
+  "command": "npx",
+  "args": ["-y", "@playwright/mcp@latest"]
+}
+```
+
+**1. Roo (Roo Code)**
+
+No Roo, adicione o servidor no arquivo `mcp_settings.json` do usuário.
+No Windows, normalmente ele fica em:
+
+```text
+C:\Users\SEU_USUARIO\AppData\Roaming\Code\User\globalStorage\rooveterinaryinc.roo-cline\settings\mcp_settings.json
+```
+
+Exemplo:
+
+```json
+{
+  "mcpServers": {
+    "playwright": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@playwright/mcp@latest"
+      ]
+    }
+  }
+}
+```
+
+Depois de salvar, reabra o Roo ou recarregue a janela do VS Code para o servidor aparecer.
+
+**2. GitHub Copilot no VS Code**
+
+Para usar com o Copilot Chat no VS Code, mantenha ou crie o arquivo `.vscode/mcp.json` na raiz do projeto.
+Este repositório já possui esse arquivo configurado, então normalmente basta abrir o projeto no VS Code e iniciar o servidor MCP pela interface do editor.
+
+Arquivo usado neste projeto:
+
+```json
+{
+  "servers": {
+    "playwright": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@playwright/mcp@latest"
+      ],
+      "type": "stdio"
+    }
+  },
+  "inputs": []
+}
+```
+
+Se quiser reutilizar a mesma configuração em outro repositório, copie este arquivo para `.vscode/mcp.json`.
+
+**3. Codex**
+
+No Codex CLI, você pode registrar o servidor MCP do Playwright com o comando abaixo:
+
+```bash
+codex mcp add playwright -- npx -y @playwright/mcp@latest
+```
+
+Para conferir se o servidor foi adicionado:
+
+```bash
+codex mcp list
+```
+
+Se preferir remover e recriar depois:
+
+```bash
+codex mcp remove playwright
+```
+
+**Referências úteis**
+
+- GitHub Copilot Chat com MCP no VS Code: https://docs.github.com/en/copilot/how-tos/context/model-context-protocol/extending-copilot-chat-with-mcp
+- GitHub Copilot Coding Agent com MCP: https://docs.github.com/en/copilot/customizing-copilot/using-model-context-protocol/extending-copilot-coding-agent-with-mcp
+- Roo Code Docs: https://docs.roocode.com/
+
 - Executar todos os testes:
 
 ```bash
@@ -77,6 +198,7 @@ npx playwright test --headed
 
 ```bash
 npx playwright test --project=chromium
+```
 
 - Executar em modo debug:
 
