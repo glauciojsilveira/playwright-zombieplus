@@ -15,6 +15,7 @@ class LoginPage {
     }
 
     async submit(email, password) {
+
         await this.page.getByPlaceholder('E-mail').fill(email);
         await this.page.getByPlaceholder('Senha').fill(password);
         
@@ -23,15 +24,16 @@ class LoginPage {
         
     }
 
-    async isLoggedIn() {
-        await this.page.waitForLoadState('networkidle');
-        await expect(this.page).toHaveURL('http://localhost:3000/admin/movies');
-    }
-
     async alertEmailHaveText(text) {
         const alert = this.page.locator('.email-alert');
         await expect(alert).toHaveText(text);
     }
+
+    async alertPasswordHaveText(text) {
+    const alert = this.page.locator('.password-alert');
+    await expect(alert).toHaveText(text);
+}
+
 
 }
 

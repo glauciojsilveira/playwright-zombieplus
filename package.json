@@ -1,9 +1,18 @@
 {
+  "name": "playwright-zombie",
+  "version": "1.0.0",
+  "description": "Projeto de automação de testes utilizando Playwright para a aplicação Zombie Plus",
+  "main": "index.js",
+  "author": "Glaucio J Sileira",
   "scripts": {
     "mcp:playwright": "npx -y @playwright/mcp@latest"
   },
   "devDependencies": {
     "@playwright/test": "^1.58.1",
-    "@types/node": "^25.2.0"
+    "@types/node": "^25.2.0",
+    "pg": "^8.20.0"
+  },
+  "dependencies": {
+    "@faker-js/faker": "^8.3.1"
   }
 }
