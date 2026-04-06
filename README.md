@@ -4,11 +4,12 @@
 
 Este repositório contém testes de regressão para o projeto Zombie+. Os casos de teste estão organizados para validar funcionalidades da landing page (fila de espera e autenticação de leads) e a área administrativa (gestão de filmes, séries e leads). O objetivo é garantir que o sistema cumpra os requisitos de negócio e ofereça uma experiência confiável ao usuário.
 <hr>
+
 ## 📌 Principais áreas de teste (resumo):
 
-- 🏠 Landing Page: cadastro de leads (fila de espera) e autenticação (login).
-- 🎬 Admin: cadastro, busca e exclusão de filmes e séries.
-- 👥 Gestão de Leads: busca e exclusão de leads.
+- 🏠 Leads: cadastro de leads (fila de espera). Gestão de Leads: busca e exclusão de leads.
+- 👥 Login: autenticação (login).
+- 🎬 Movies: cadastro, busca e exclusão de filmes e séries.
 
 Veja os casos completos em: [CasosDeTestes.md](CasosDeTestes.md)
 
