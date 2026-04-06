@@ -13,7 +13,7 @@ Este repositório contém testes de regressão para o projeto Zombie+. Os casos 
 Veja os casos completos em: [CasosDeTestes.md](CasosDeTestes.md)
 
 ## 🛠️ Tecnologias usadas no projeto
-<hr>
+
 - 🟢 Node.js: runtime principal para executar os testes, scripts e integrações do projeto.
 - 📦 npm: gerenciamento de dependências e execução de comandos como `npx playwright test` e `npx playwright install`.
 - 🎭 Playwright: framework de automação E2E usado para validar fluxos da landing page e da área administrativa.
