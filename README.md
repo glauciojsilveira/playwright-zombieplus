@@ -1,5 +1,5 @@
-<hr>
-# 📌 Zombie+ — Resumo do Projeto by Glaucio J Silveira 
+
+# 📌 Zombie+  Resumo do Projeto by Glaucio J Silveira 
 <hr>
 
 Este repositório contém testes de regressão para o projeto Zombie+. Os casos de teste estão organizados para validar funcionalidades da landing page (fila de espera e autenticação de leads) e a área administrativa (gestão de filmes, séries e leads). O objetivo é garantir que o sistema cumpra os requisitos de negócio e ofereça uma experiência confiável ao usuário.
@@ -13,7 +13,7 @@ Este repositório contém testes de regressão para o projeto Zombie+. Os casos 
 Veja os casos completos em: [CasosDeTestes.md](CasosDeTestes.md)
 
 ## 🛠️ Tecnologias usadas no projeto
-
+<hr>
 - 🟢 Node.js: runtime principal para executar os testes, scripts e integrações do projeto.
 - 📦 npm: gerenciamento de dependências e execução de comandos como `npx playwright test` e `npx playwright install`.
 - 🎭 Playwright: framework de automação E2E usado para validar fluxos da landing page e da área administrativa.
@@ -31,6 +31,7 @@ Veja os casos completos em: [CasosDeTestes.md](CasosDeTestes.md)
 - 🤖 Codex CLI: cliente compatível com MCP citado no projeto para registrar e consumir o servidor Playwright com comandos como `codex mcp add` e `codex mcp list`.
 - 💻 VS Code com MCP: ambiente de editor suportado pelo projeto por meio do arquivo `.vscode/mcp.json`.
 <hr>
+
 ## 📋 Pré-requisitos
 
 - Node.js (recomendado >= 16)
@@ -38,7 +39,7 @@ Veja os casos completos em: [CasosDeTestes.md](CasosDeTestes.md)
 - Acesso à internet para baixar navegadores Playwright
 
 ## ⚙️ Instalação passo a passo (Windows)
-
+<hr>
 1. Verifique versões:
 
 ```bash
@@ -68,10 +69,8 @@ Observações:
 - Em Linux pode ser necessário `npx playwright install-deps` antes de instalar navegadores.
 - Não é necessário instalar o Playwright globalmente; usar `npx` garante a versão do projeto.
 
-## ▶️ Comandos úteis para executar os testes
-
 ## 🔌 MCP do Playwright neste projeto
-
+<hr>
 O workspace deste repositório já está configurado com o servidor MCP do Playwright em `.vscode/mcp.json`:
 
 ```json
@@ -103,7 +102,7 @@ npx playwright install
 ```
 
 ## 🧠 Como instalar e configurar no Roo, no Copilot e no Codex
-
+<hr>
 Todos os exemplos abaixo usam o mesmo servidor MCP do Playwright:
 
 ```json
@@ -141,7 +140,7 @@ Exemplo:
 Depois de salvar, reabra o Roo ou recarregue a janela do VS Code para o servidor aparecer.
 
 ### 2. 🤝 GitHub Copilot no VS Code
-
+<hr>
 Para usar com o Copilot Chat no VS Code, mantenha ou crie o arquivo `.vscode/mcp.json` na raiz do projeto.
 Este repositório já possui esse arquivo configurado, então normalmente basta abrir o projeto no VS Code e iniciar o servidor MCP pela interface do editor.
 
@@ -166,7 +165,7 @@ Arquivo usado neste projeto:
 Se quiser reutilizar a mesma configuração em outro repositório, copie este arquivo para `.vscode/mcp.json`.
 
 ### 3. 🤖 Codex
-
+<hr>
 No Codex CLI, você pode registrar o servidor MCP do Playwright com o comando abaixo:
 
 ```bash
@@ -191,6 +190,8 @@ codex mcp remove playwright
 - GitHub Copilot Coding Agent com MCP: https://docs.github.com/en/copilot/customizing-copilot/using-model-context-protocol/extending-copilot-coding-agent-with-mcp
 - Roo Code Docs: https://docs.roocode.com/
 
+## ▶️ Comandos úteis para executar os testes
+<hr>
 - Executar todos os testes:
 
 ```bash
@@ -247,7 +248,7 @@ npx playwright test -g "has title"
 ```
 
 ## 💡 Sugestão: adicionar script npm
-
+<hr>
 Para facilitar, adicione ao `package.json`:
 
 ```json
@@ -259,10 +260,10 @@ Para facilitar, adicione ao `package.json`:
 Assim você poderá executar `npm test`.
 
 ## 📁 Local de saída do relatório
-
+<hr>
 O Playwright gera por padrão a pasta `playwright-report/` com o relatório HTML quando executado com o reporter `html`.
 
 Se quiser rodar apenas o teste renomeado, o arquivo de exemplo agora está em: [tests/leads.js](tests/leads.js)
 
-<hr>
+
 # By Glauio
