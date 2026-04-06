@@ -1,8 +1,9 @@
+<hr>
 # 📌 Zombie+ — Resumo do Projeto by Glaucio J Silveira 
-hr
+<hr>
 
 Este repositório contém testes de regressão para o projeto Zombie+. Os casos de teste estão organizados para validar funcionalidades da landing page (fila de espera e autenticação de leads) e a área administrativa (gestão de filmes, séries e leads). O objetivo é garantir que o sistema cumpra os requisitos de negócio e ofereça uma experiência confiável ao usuário.
-
+<hr>
 ## 📌 Principais áreas de teste (resumo):
 
 - 🏠 Landing Page: cadastro de leads (fila de espera) e autenticação (login).
@@ -29,7 +30,7 @@ Veja os casos completos em: [CasosDeTestes.md](CasosDeTestes.md)
 - 🧪 Playwright Test MCP Server: servidor adicional configurado em `.vscode/mcp.json` com `npx playwright run-test-mcp-server`.
 - 🤖 Codex CLI: cliente compatível com MCP citado no projeto para registrar e consumir o servidor Playwright com comandos como `codex mcp add` e `codex mcp list`.
 - 💻 VS Code com MCP: ambiente de editor suportado pelo projeto por meio do arquivo `.vscode/mcp.json`.
-
+<hr>
 ## 📋 Pré-requisitos
 
 - Node.js (recomendado >= 16)
@@ -263,5 +264,5 @@ O Playwright gera por padrão a pasta `playwright-report/` com o relatório HTML
 
 Se quiser rodar apenas o teste renomeado, o arquivo de exemplo agora está em: [tests/leads.js](tests/leads.js)
 
-hr
+<hr>
 # By Glauio
